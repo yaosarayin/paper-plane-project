@@ -14,7 +14,6 @@ function MyComponent() {
 
 const BlogPosts = ({ pageContext }) => {
     const post = pageContext.post;
-    console.log( html`<a href="/">Hello!</a>`)
     return (
         <Layout>
             <h1>{post.title}</h1>
