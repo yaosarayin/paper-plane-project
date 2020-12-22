@@ -24,6 +24,7 @@ export default function BlogPreview({posts}) {
     //   </div>
     // }
     renderItem={item => (
+      <Link to={"/blog/".concat(item.slug)}>
       <List.Item
         key={item.title}
         actions={[
@@ -35,14 +36,14 @@ export default function BlogPreview({posts}) {
           <GraphImg image={item.coverImage} maxWidth={400}/>
         }
       >
-        
         <List.Item.Meta
           //avatar={<Avatar src={item.coverImage} />}
-          title={<a href={"/blog/".concat(item.slug)}>{item.title}</a>}
+          title={item.title}
           description={item.excerpt}
         />
         {item.content}
-      </List.Item>
+        </List.Item>
+      </Link>
     )}
   />
     </div>
