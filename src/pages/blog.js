@@ -1,6 +1,5 @@
 import React from "react"
 import {graphql , useStaticQuery, Link} from "gatsby"
-import { Row, Col } from 'antd';
 import Layout from '../components/Layout'
 import BlogPreview from '../components/BlogPreview'
 
@@ -28,10 +27,10 @@ const Blog = () => {
   return (
     <Layout>
       <h1>博客</h1>
-        {posts.map((post,key) => (
-            <BlogPreview post={post} />
-        ))}
+      <BlogPreview posts={posts}/>
     </Layout>
   )
 }
 export default Blog
+
+
