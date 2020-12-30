@@ -43,7 +43,7 @@ class Navbar extends React.Component {
         <Link to={`/join`}>加入我们</Link>
         </Menu.Item>
         <Menu.Item key="WeChat">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI5MjIwNDUwNg==&scene=124#wechat_redirect" target="_blank" rel="noopener noreferrer">
             微信公众号
           </a>
         </Menu.Item>

@@ -28,9 +28,9 @@ export default function BlogPreview({posts}) {
       <List.Item
         key={item.title}
         actions={[
-          <IconText icon={StarOutlined} text="156" key="list-vertical-star-o" />,
-          <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
-          <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
+          <IconText icon={StarOutlined} text="" key="list-vertical-star-o" />,
+          <IconText icon={LikeOutlined} text="" key="list-vertical-like-o" />,
+          <IconText icon={MessageOutlined} text="" key="list-vertical-message" />,
         ]}
         extra={
           <GraphImg image={item.coverImage} maxWidth={400}/>
