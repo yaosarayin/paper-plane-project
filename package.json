@@ -16,6 +16,7 @@
   "dependencies": {
     "antd": "^4.6.2",
     "babel-plugin-styled-components": "^1.12.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.50",
     "gatsby-image": "^2.4.17",
     "gatsby-plugin-antd": "^2.2.0",
@@ -23,7 +24,9 @@
     "gatsby-plugin-less": "^4.0.3",
     "gatsby-plugin-manifest": "^2.9.1",
     "gatsby-plugin-styled-components": "^3.7.0",
+    "gatsby-source-drupal": "^3.12.0",
     "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-source-graphcms": "^2.1.1",
     "gatsby-source-graphql": "^2.7.2",
     "graphcms-image": "^1.1.0-beta4",
     "node": "13.11.0",

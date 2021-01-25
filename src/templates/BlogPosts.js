@@ -17,7 +17,7 @@ const BlogPosts = ({ pageContext }) => {
     return (
         <Layout>
             <h1>{post.title}</h1>
-            <GraphImg image={post.coverImage} maxWidth={800} style={{"margin-bottom":"30px"}}/>
+            <GraphImg image={post.coverImage} maxWidth={800} style={{"marginBottom":"30px"}}/>
             <div dangerouslySetInnerHTML={{ __html: post.content.html }}></div>
         </Layout>    
     

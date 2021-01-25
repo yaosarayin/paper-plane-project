@@ -3,7 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const path = require('path')
 module.exports = {
   /* Your site config here */
@@ -12,6 +14,12 @@ module.exports = {
     description: 'Fighting for accessible mental health education'  
   },
   plugins: [
+    // {
+    //   resolve: 'gatsby-source-graphcms',
+    //   options: {
+    //     endpoint: process.env.GRAPHCMS_ENDPOINT,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

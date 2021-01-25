@@ -41,13 +41,21 @@ const About = () => {
         dataSource={authors}
         renderItem={author => (
           <List.Item>
+
+            {author.picture ? 
             <Card
               hoverable
               style={gridStyle}
               cover={<GraphImg image={author.picture} maxWidth={300}/>}
             >
               <Meta title={author.name} description={author.biography} />
-            </Card>
+            </Card> : 
+            <Card
+            hoverable
+            style={gridStyle}
+          >
+            <Meta title={author.name} description={author.biography} />
+          </Card>}
           </List.Item>
         )}
       />
