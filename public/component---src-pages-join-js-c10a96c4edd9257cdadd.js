@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{L80X:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),u=t.n(a),c=(t("Wbzz"),t("7oih"));e.default=function(){return u.a.createElement(c.a,null,u.a.createElement("h1",null,"加入我们"))}}}]);
-//# sourceMappingURL=component---src-pages-join-js-c10a96c4edd9257cdadd.js.map

@@ -1,73 +1,78 @@
 /**
- * Configure your Gatsby site with this file.
+ * 👋 Hey there!
+ * This file is the starting point for your new WordPress/Gatsby site! 🚀
+ * For more information about what this file is and does, see
+ * https://www.gatsbyjs.com/docs/gatsby-config/
  *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-const path = require('path')
+
 module.exports = {
-  /* Your site config here */
-  siteMetadata: {
-    title: 'Paper Plane Project',
-    description: 'Fighting for accessible mental health education'  
-  },
+  /**
+   * Adding plugins to this array adds them to your Gatsby site.
+   *
+   * Gatsby has a rich ecosystem of plugins.
+   * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
+   */
   plugins: [
-    // {
-    //   resolve: 'gatsby-source-graphcms',
-    //   options: {
-    //     endpoint: process.env.GRAPHCMS_ENDPOINT,
-    //   },
-    // },
     {
+      /**
+       * First up is the WordPress source plugin that connects Gatsby
+       * to your WordPress site.
+       *
+       * visit the plugin docs to learn more
+       * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/README.md
+       *
+       */
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // the only required plugin option for WordPress is the GraphQL url.
+        url: process.env.WPGRAPHQL_URL || `http://54.251.181.102/graphql`,
+      },
+    },
+
+    /**
+     * We need this plugin so that it adds the "File.publicURL" to our site
+     * It will allow us to access static url's for assets like PDF's
+     *
+     * See https://www.gatsbyjs.org/packages/gatsby-source-filesystem/ for more info
+     */
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
+      },
+    },
+
+    /**
+     * The following two plugins are required if you want to use Gatsby image
+     * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image
+     * if you're curious about it.
+     */
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+    {
+      // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,
       options: {
-        display: "standalone",
-        icon: "static/ppp-icon.svg", // This path is relative to the root of the site.
-        // An optional attribute which provides support for CORS check.
-        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
-        // Any invalid keyword or empty string defaults to `anonymous`
-        crossOrigin: `use-credentials`,
+        name: `The Paper Plane Project`,
+        short_name: `PPP`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/gatsby-icon.png`,
       },
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "GraphCMS",
-        fieldName: "gcms",
-        url: "https://api-ap-northeast-1.graphcms.com/v2/ckek7ems813vg01z1ffsrhy05/master"
-      }
 
-    },
-    {
-      resolve: "gatsby-plugin-antd",
-      options: {
-        style: true
-      }
-    },
-    {
-      resolve: "gatsby-plugin-less",
-      options: {
-        lessOptions : {
-          javascriptEnabled: true,
-          modifyVars: {hack: `true; @import "${path.resolve(
-            __dirname,
-            "./src/styles",
-            "theme.less"
-          )}";`
-          }
-        }
-      },
-    },
-    {
-      resolve: `gatsby-plugin-i18n`,
-      options: {
-        langKeyDefault: 'zh',
-        langKeyForNull: 'zh',
-        prefixDefault: false,
-        useLangKeyLayout: false,
-      },
-    },
+    // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
+    `gatsby-plugin-react-helmet`,
+
+    /**
+     * this (optional) plugin enables Progressive Web App + Offline functionality
+     * To learn more, visit: https://gatsby.dev/offline
+     */
+    // `gatsby-plugin-offline`,
   ],
-}
+};
