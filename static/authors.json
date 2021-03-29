@@ -1,0 +1,168 @@
+{
+    "data": {
+      "users": {
+        "nodes": [
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/田紫涵Angela-Tian-150x150.jpeg",
+              "width": 96
+            },
+            "id": "dXNlcjoxMA==",
+            "firstName": "Angela",
+            "lastName": "Tian",
+            "email": "ztian@wma.us",
+            "description": "我叫田紫涵Angela。今年17岁，就读于Wilbraham &amp; Monson Academy。目前为止没有什么坐班类的工作经验，但如果对“工作”的定义为参与社会分工获取与劳动匹配的报酬，那么我给报社发诗，并有诗在深圳日报上出刊的行为可以定义为工作。我可以算自由作家，因为我写小说，并拥有书号。以上的描述让我看起来像一个文科生，然而我其实是一个被创造掩盖的理科生。这次的全球疫情让我想进入制药业，主修生物工程为社会发展尽微薄之力。业余时间个人爱好为聊天，喜欢写小说，看小说，学习新的技能。今年在学校报了一个有关心理健康的课程，让我意识到很多人对心理健康似乎都存在一些误解，而引发了一系列的连锁反应，对社会的凝聚力存在负面影响。因此本人想在力所能及的范围内推进科普工作。可能并不会产生什么变化，但是如果有更多的人加入，每个人都尽自己的一份力，那积少成多，相信可以帮助一些有需求的人。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Annie-Zhan-150x150.jpg",
+              "width": 96
+            },
+            "id": "dXNlcjo1",
+            "firstName": "Annie",
+            "lastName": "Zhan",
+            "email": "az4444qx@gmail.com",
+            "description": "詹云淇是目前就读于深圳外国语学校国际部的秃头DP1学生。业余时间她喜欢画板绘，画丙烯，画水彩，画一切，和做手工；一切她能自己做的都会尝试做出来。未来，她想学插画专业，通过画笔下的世界，给世界带来幸福和快乐。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://1.gravatar.com/avatar/a6b186e21abfe7bccebebc2fef09d320?s=96&d=mm&r=g",
+              "width": 96
+            },
+            "id": "dXNlcjo0",
+            "firstName": "Annika",
+            "lastName": "Liu",
+            "email": "superkleta1@gmail.com",
+            "description": "刘玥目前就读于深圳国际交流学院，是一名A1学生。她未来的专业方向是经济或者商科。平时，刘玥喜欢看看漫画喝喝茶，边看漫画边喝茶。她希望通过纸飞机计划帮助更多需要帮助的同龄人。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://0.gravatar.com/avatar/0022d831897cf303ec32fa94d48f4177?s=96&d=mm&r=g",
+              "width": 96
+            },
+            "id": "dXNlcjoxMw==",
+            "firstName": "Connie",
+            "lastName": "Chen",
+            "email": "conniechen_0823@icloud.com",
+            "description": "77是一个深圳外国语学校国际部的11年级学生！她喜欢一切不是传统意义学科的学科（比如dance/sports/MUN or even CAS）。她的兴趣爱好包括芭蕾、现代舞、径赛、看电视剧、摄影、排球、篮球和吃东西。为什么加入纸飞机？因为mental health is no joke…"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://0.gravatar.com/avatar/c79ac0e33d9a1fc16d79602fa7802ab1?s=96&d=mm&r=g",
+              "width": 96
+            },
+            "id": "dXNlcjoxMg==",
+            "firstName": "Danny",
+            "lastName": "Pan",
+            "email": "22.danny.pan@swis.cn",
+            "description": "潘大立是一个很酷的男孩子！喜欢吃喝玩乐睡觉，热爱艺术和运动。因为没什么梦想所以梦想是找到人生的目标并在探寻宇宙的真理上越走越远.....有机会希望顺便拯救一下世界？希望通过纸飞机在帮助别人的同时找到自己的价值与意义叭。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Eden-Lei-150x150.jpg",
+              "width": 96
+            },
+            "id": "dXNlcjo2",
+            "firstName": "Eden",
+            "lastName": "Lei",
+            "email": "serena080488@gmail.com",
+            "description": "Eden现在16岁，在Boston University Academy上高中。 她以后想从事医学，心理学，或者生物方面的工作。业余时间Eden喜欢击剑，拉琴，画画，以及与其他小朋友们讨论社会见闻，政治事件，还有自己的柴犬。其实，心理疾病一直普遍地生活在我们之中，只是不够的了解与重视让它轻易地被忽略。 在Eden发现心里疾病大量的存在在她的身边，并且当她自己也经历了这一切后，她发现她有必要为这件事出一份力。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Effram-Wei-150x150.jpeg",
+              "width": 96
+            },
+            "id": "dXNlcjo3",
+            "firstName": "Effram",
+            "lastName": "Wei",
+            "email": "efframwei123@gmail.com",
+            "description": "我叫Effram，今年十六岁。现在澳大利亚悉尼The Scots College上十一年级。以前的工作学习经验有参加chess教练培训以及当tutor，还有community service和志愿活动。业余时间喜欢下国际象棋，弹钢琴，美术，和打游戏🎮。加入纸飞机的原因是想结识更多新的伙伴以及丰富自己的工作经验，进一步了解和学习心理健康。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Grace-Deng-150x150.jpeg",
+              "width": 96
+            },
+            "id": "dXNlcjo5",
+            "firstName": "Grace",
+            "lastName": "Deng",
+            "email": "2407894933@qq.com",
+            "description": "我叫Grace，出生于2004年，所以今年要17岁了！我现在在深圳蛇口QSI上学，是一名Junior。我平日里除了学习还有写作业以外，每周都会去打网球还有偶尔地会去gym。空闲下来的时间我可能会自己在家看看anime或者约朋友出去玩。\r\n\t在过去的高中两年我有在一些honor societies里面组织过一些学校的活动，我也有在student council待过一年。虽然我觉得我会的事情不多，但是我很乐意去尝试与学习新的事物！我目前对于自己的未来的路并不清楚，但是大学的话目前应该考虑的是会去加拿大或者（小概率）美国吧。至于读什么专业我现在也不是特别清楚但是我觉得我大概率会去读商或者心理学。\r\n\t我选择参加纸飞机的一大原因就是因为我觉得心理健康在现在的社会的确是个热议的话题，而我也觉得这是个十分值得被关注的事情，尤其是像在亚洲这种近年来才开始关注这件事情的国家。因为我本身对心理学也特别感兴趣，所以我觉得两者之间存在必然的联系。除此之外，我参加纸飞机的另一大因素就是因为我想要尝试着慢慢走出自己的bubble，让自己多去和学校之外的人接触。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Grace-Zhong-150x150.jpeg",
+              "width": 96
+            },
+            "id": "dXNlcjoxMQ==",
+            "firstName": "Grace",
+            "lastName": "Zhong",
+            "email": "gracezhong712@gmail.com",
+            "description": "大家好，我是九年级新生Grace。 我正在上加州的一所私立寄宿学校Thacher School。 今年，我即将满十五岁，但我还没有找到我将来想要做的特定职业。 我目前喜欢这样做的事情千差万别，我只是想让自己的选择保持开放。 我最喜欢的爱好是弹钢琴，小提琴，阅读和写英语故事。\r\n\r\n纸飞机之所以如此吸引我，是因为它选择了关注的重要问题。 心理健康已逐渐成为年轻人不可否认的重要组成部分。 许多学校，成人甚至儿童本人都忽略并忽视了这个健康领域，这轻视了它的重要性。 许多青年，我的许多朋友和我本人，在青少年时期都遭受过心理和社会上的困难，尤其是刚进入新环境的年轻人。对我来说，他是个非常庞大的话题也是一个非常敏感的话题。如果纸飞机能改造他，让他背跟多人知道和重视，是一件非常隆重并且有意义的事情。"
+          },
+          {
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Li-Yin-Headshot-150x150.jpg",
+              "width": 96
+            },
+            "id": "dXNlcjoz",
+            "firstName": "Li",
+            "lastName": "Yin",
+            "email": "kyin@thacher.org",
+            "description": "尹丽是一只非常在乎Mental Health Issues的高中生！她在加州撒切尔高中上11年级；业余时间她喜欢骑马、击剑、演音乐剧和画画。有时候她会沉迷学习语言无法自拔... 她梦想以后周游世界并帮助很多有需要的人。她未来想学的科目大概是古典文学，语言学，或者外交政策吧。也许都学？"
+        },
+        {
+            "id": "dXNlcjox",
+            "avatar": {
+              "foundAvatar": true,
+              "height": 96,
+              "size": 96,
+              "url": "http://54.251.181.102/wp-content/uploads/2021/03/Yao-Yin-150x150.png",
+              "width": 96
+            },
+            "firstName": "Yao",
+            "lastName": "Yin",
+            "email": "yaosarayin@gmail.com",
+            "description": "尹瑶是一个在哈佛刚上完大一的吃货。她目前的计划是当一只学物理的程序猿，但是事实上她并不知道自己以后究竟要干嘛。业余时间她喜欢跑步，做饭，看书看到睡着，瞎涂乱画，发呆，逛网店但是什么也不买，找有意思的东西自学，还有思考人类存在究竟有什么意义。"
+          }
+        ]
+      },
+    "extensions": {
+      "debug": [
+        {
+          "type": "DEBUG_LOGS_INACTIVE",
+          "message": "GraphQL Debug logging is not active. To see debug logs, GRAPHQL_DEBUG must be enabled."
+        }
+      ]
+    }}}

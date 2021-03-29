@@ -2,37 +2,41 @@ import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import styled from "styled-components";
 import Layout from "../components/layout";
-
-export const pageQuery = graphql`
-  query AllUsers {
-    allWpUser {
-      nodes {
-        avatar {
-          foundAvatar
-          height
-          size
-          url
-          width
-        }
-        firstName
-        lastName
-        email
-        description
-      }
-    }
-  }
-`;
+import data from "../../static/authors.json";
+console.log(data);
+// export const pageQuery = graphql`
+// query AllUsers {
+//   allWpUser {
+//     nodes {
+//       avatar {
+//         foundAvatar
+//         height
+//         size
+//         url
+//         width
+//       }
+//       firstName
+//       lastName
+//       email
+//       description
+//     }
+//   }
+// }
+// `;
 
 const List = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const Card = styled.div`
   min-height: 100%;
+  max-width: 45%;
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
-  margin: 10px;
+  margin: 5px;
   flex-direction: column;
   text-decoration: none;
   color: #444;
@@ -66,14 +70,9 @@ const Card = styled.div`
   }
 `;
 
-const About = ({ data }) => {
-  const authors = data.allWpUser.nodes;
-  const { Meta } = Card;
-  const gridStyle = {
-    width: "100%",
-    textAlign: "center",
-  };
-
+const About = () => {
+  const authors = data.data.users.nodes;
+  // const authors = data.allWpUser.nodes;
   return (
     <Layout>
       <h1>关于我们</h1>
