@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Row, Col } from "antd";
 import Layout from "../components/layout";
 import QRcode from "../../static/wechat-QRcode.png";
 

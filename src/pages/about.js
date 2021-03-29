@@ -1,10 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import styled from "styled-components";
-
-import { Row, Col } from "antd";
 import Layout from "../components/layout";
-// import { List, Avatar, Space, Card } from "antd";
 
 export const pageQuery = graphql`
   query AllUsers {
