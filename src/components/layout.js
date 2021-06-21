@@ -20,11 +20,11 @@ const Layout = ({ isHomePage, children }) => {
   `);
 
   return (
-    <div className="global-wrapper" data-is-root-path={isHomePage}>
+    <div className="global-wrapper px-16 py-8" data-is-root-path={isHomePage}>
       <Navbar />
-      <header className="global-header">
+      <header className="global-header py-8">
         {isHomePage ? (
-          <h1 className="main-heading">
+          <h1 className="main-heading text-8xl font-display">
             <Link to="/">{parse(title)}</Link>
           </h1>
         ) : (

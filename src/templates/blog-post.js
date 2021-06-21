@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{parse(post.title)}</h1>
+          <h1 class="chinese-display" itemProp="headline">{parse(post.title)}</h1>
 
           <p>{post.date}</p>
 

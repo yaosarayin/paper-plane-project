@@ -7,6 +7,7 @@
  */
 
 module.exports = {
+  
   /**
    * Adding plugins to this array adds them to your Gatsby site.
    *
@@ -14,6 +15,7 @@ module.exports = {
    * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
    */
   plugins: [
+'gatsby-plugin-postcss',
     {
       /**
        * First up is the WordPress source plugin that connects Gatsby

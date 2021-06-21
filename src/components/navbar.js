@@ -15,59 +15,59 @@ class Navbar extends React.Component {
   render() {
     const { current } = this.state;
 
-    const Menu = styled.div`
-      display: flex;
-    `;
+    // const Menu = styled.div`
+    //   display: flex;
+    // `;
 
-    const MenuItem = styled.div`
-      text-align: center; /* Aligns <a> inside of NavIcon div */
-      margin-bottom: 0; /* Puts space between NavItems */
-      padding: 20px;
-      margin-right: 20px;
-      a,
-      p {
-        font-size: 1em;
-        color: grey;
-        text-decoration: none;
-        :hover {
-          opacity: 0.7;
-        }
-      }
-      .dropdown-content {
-        display: none;
-        background-color: #f9f9f9;
-        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-        z-index: 1;
-      }
+    // const MenuItem = styled.div`
+    //   text-align: center; /* Aligns <a> inside of NavIcon div */
+    //   margin-bottom: 0; /* Puts space between NavItems */
+    //   padding: 20px;
+    //   margin-right: 20px;
+    //   a,
+    //   p {
+    //     font-size: 1em;
+    //     color: grey;
+    //     text-decoration: none;
+    //     :hover {
+    //       opacity: 0.7;
+    //     }
+    //   }
+    //   .dropdown-content {
+    //     display: none;
+    //     background-color: #f9f9f9;
+    //     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    //     z-index: 1;
+    //   }
 
-      /* Show the dropdown menu on hover */
-      &:hover .dropdown-content {
-        display: block;
-        line-break: wrap;
-      }
+    //   /* Show the dropdown menu on hover */
+    //   &:hover .dropdown-content {
+    //     display: block;
+    //     line-break: wrap;
+    //   }
 
-      & > div {
-        position: absolute;
-      }
+    //   & > div {
+    //     position: absolute;
+    //   }
 
-      /* Change the background color of the dropdown button when the dropdown content is shown */
-      .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
-      }
-    `;
+    //   /* Change the background color of the dropdown button when the dropdown content is shown */
+    //   .dropdown:hover .dropbtn {
+    //     background-color: #3e8e41;
+    //   }
+    // `;
 
     return (
-      <Menu
+      <div
         onClick={this.handleClick}
         selectedKeys={[current]}
-        mode="horizontal"
+        class="flex"
       >
-        <MenuItem key="Home">
+        <div class="pr-8 py-8 hover:text-purple-500 " key="Home">
           <Link to={`/`}>首页</Link>
-        </MenuItem>
-        <MenuItem key="About">
+        </div>
+        <div class="pr-8 py-8 hover:text-purple-500 " key="About">
           <Link to={`/about`}>关于我们</Link>
-        </MenuItem>
+        </div>
         {/* <MenuItem key="Blog">
           <Link to={`/blog`}>博客</Link>
         </MenuItem> */}
@@ -81,10 +81,10 @@ class Navbar extends React.Component {
             <Menu.Item key="4">Coming Soon</Menu.Item>
           </Menu.ItemGroup>
         </SubMenu> */}
-        <MenuItem key="Join">
+        <div  class="pr-8 py-8 hover:text-purple-500 " key="Join">
           <Link to={`/join`}>加入我们</Link>
-        </MenuItem>
-        <MenuItem key="WeChat">
+        </div>
+        <div  class="pr-8 py-8 hover:text-purple-500 " key="WeChat">
           <a
             href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI5MjIwNDUwNg==&scene=124#wechat_redirect"
             target="_blank"
@@ -92,8 +92,8 @@ class Navbar extends React.Component {
           >
             微信公众号
           </a>
-        </MenuItem>
-      </Menu>
+        </div>
+      </div>
     );
   }
 }

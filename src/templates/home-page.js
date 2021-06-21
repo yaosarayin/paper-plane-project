@@ -43,7 +43,7 @@ const BlogIndex = ({
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <h2 class="font-chinese-display">
                     <Link to={post.uri} itemProp="url">
                       <span itemProp="headline">{parse(title)}</span>
                     </Link>
