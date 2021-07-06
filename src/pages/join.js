@@ -5,8 +5,8 @@ import QRcode from "../../static/wechat-QRcode.png";
 
 const Join = () => {
   return (
-    <Layout>
-      <h1>加入我们</h1>
+    <Layout header={<h1 className='chinese-h1'>加入我们</h1>}>
+      <div className='section'>
       <p>
         “纸飞机计划”由青少年们所开启，也为青少年们而成立。
         世界卫生组织的官网上显示，每四人中就有一人患有某种心理健康疾病。心理健康问题出没在中国与全球的每个角落，但只有少数人愿意去帮助心理健康问题患者，了解心理健康背后的知识。
@@ -31,6 +31,7 @@ const Join = () => {
         认识团队中其他的青少年，结交新的朋友
       </ul>
       当然，如果你有任何疑问，也欢迎直接私信公众号或扫一扫联系上面的微信号哟！！
+      </div>
     </Layout>
   );
 };

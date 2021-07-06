@@ -28,10 +28,7 @@ const Bio = () => {
 
   return (
     <div
-      style={{
-        display: "flex",
-        alignContent: "center",
-      }}
+      className="bio"
     >
       {avatarUrl && (
         <img
@@ -48,12 +45,12 @@ const Bio = () => {
       {author?.firstName && (
         <p>
           Written by <strong>{author.firstName}</strong>
-          {` `}
+          {`.  `}
           {author?.description || null}
           {` `}
           {author?.twitter && (
-            <a href={`https://twitter.com/${author?.twitter || ``}`}>
-              You should follow them on Twitter
+            <a href={`https://twitter.com/${author?.twitter || ``}`} className="text-purple-400">
+              Follow them on Twitter
             </a>
           )}
         </p>

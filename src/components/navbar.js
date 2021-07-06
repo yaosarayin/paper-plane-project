@@ -14,58 +14,26 @@ class Navbar extends React.Component {
   render() {
     const { current } = this.state;
 
-    // const Menu = styled.div`
-    //   display: flex;
-    // `;
-
-    // const MenuItem = styled.div`
-    //   text-align: center; /* Aligns <a> inside of NavIcon div */
-    //   margin-bottom: 0; /* Puts space between NavItems */
-    //   padding: 20px;
-    //   margin-right: 20px;
-    //   a,
-    //   p {
-    //     font-size: 1em;
-    //     color: grey;
-    //     text-decoration: none;
-    //     :hover {
-    //       opacity: 0.7;
-    //     }
-    //   }
-    //   .dropdown-content {
-    //     display: none;
-    //     background-color: #f9f9f9;
-    //     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    //     z-index: 1;
-    //   }
-
-    //   /* Show the dropdown menu on hover */
-    //   &:hover .dropdown-content {
-    //     display: block;
-    //     line-break: wrap;
-    //   }
-
-    //   & > div {
-    //     position: absolute;
-    //   }
-
-    //   /* Change the background color of the dropdown button when the dropdown content is shown */
-    //   .dropdown:hover .dropbtn {
-    //     background-color: #3e8e41;
-    //   }
-    // `;
-
     return (
       <div
         onClick={this.handleClick}
         selectedKeys={[current]}
-        class="flex"
+        className="flex px-16 py-4 bg-purple-100 2xl:px-32"
       >
-        <div class="pr-8 py-8 hover:text-purple-500 " key="Home">
+        <div className="pr-8 py-4 hover:text-purple-500 " key="Home">
           <Link to={`/`}>首页</Link>
         </div>
-        <div class="pr-8 py-8 hover:text-purple-500 " key="About">
+        <div className="pr-8 py-4 hover:text-purple-500 " key="About">
           <Link to={`/about`}>关于我们</Link>
+        </div>
+        <div className="pr-8 py-4 hover:text-purple-500 " key="Blog">
+          <Link to={`/blog`}>博客</Link>
+        </div>
+        <div className="pr-8 py-4 hover:text-purple-500 " key="Events">
+          <Link to={`/events`}>活动</Link>
+        </div>
+        <div className="pr-8 py-4 hover:text-purple-500 " key="Resources">
+          <Link to={`/resources`}>资源</Link>
         </div>
         {/* <MenuItem key="Blog">
           <Link to={`/blog`}>博客</Link>
@@ -80,10 +48,10 @@ class Navbar extends React.Component {
             <Menu.Item key="4">Coming Soon</Menu.Item>
           </Menu.ItemGroup>
         </SubMenu> */}
-        <div  class="pr-8 py-8 hover:text-purple-500 " key="Join">
+        <div  className="pr-8 py-4 hover:text-purple-500 " key="Join">
           <Link to={`/join`}>加入我们</Link>
         </div>
-        <div  class="pr-8 py-8 hover:text-purple-500 " key="WeChat">
+        <div  className="pr-8 py-4 hover:text-purple-500 " key="WeChat">
           <a
             href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI5MjIwNDUwNg==&scene=124#wechat_redirect"
             target="_blank"

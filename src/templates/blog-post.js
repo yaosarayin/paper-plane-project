@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   };
 
   return (
-    <Layout>
+    <Layout header={<h1 className="chinese-h2" itemProp="headline">{parse(post.title)}</h1>}>
       <SEO title={post.title} description={post.excerpt} />
 
       <article
@@ -27,9 +27,9 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 class="chinese-display" itemProp="headline">{parse(post.title)}</h1>
+          
 
-          <p>{post.date}</p>
+          <p className="date">{post.date}</p>
 
           {/* if we have a featured image for this post let's display it */}
           {featuredImage?.fluid && (
@@ -50,9 +50,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
         <hr />
 
-        <footer>
-          <Bio />
-        </footer>
+        <Bio />
       </article>
 
       <nav className="blog-post-nav">

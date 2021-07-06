@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import parse from "html-react-parser";
 import Navbar from "./navbar";
 
-const Layout = ({ isHomePage, children }) => {
+const Layout = ({ header, isHomePage, children }) => {
   const {
     wp: {
       generalSettings: { title },
@@ -20,24 +20,30 @@ const Layout = ({ isHomePage, children }) => {
   `);
 
   return (
-    <div className="global-wrapper px-16 py-8" data-is-root-path={isHomePage}>
+    <div className="global-wrapper" data-is-root-path={isHomePage}>
       <Navbar />
-      <header className="global-header py-8">
+      <header className="global-header">
         {isHomePage ? (
-          <h1 className="main-heading text-8xl font-display">
-            <Link to="/">{parse(title)}</Link>
-          </h1>
+          <div>
+            <h1 className="chinese-h1">
+              {/* <Link to="/">{parse(title)}</Link> */}
+              <Link to="/">纸飞机计划</Link> 
+            </h1>
+            <h2 className="english-h1">The Paper Plane Project</h2>
+          </div>
+          
         ) : (
-          <Link className="header-link-home" to="/">
-            {/* {title} */}
-          </Link>
+          // <Link className="header-link-home" to="/">
+          //   {/* {title} */}
+          // </Link>
+          <div className="post-chinese-heading">{header}</div>
         )}
       </header>
 
       <main>{children}</main>
 
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, 纸飞机计划, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
         {` `}
