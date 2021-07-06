@@ -10,7 +10,7 @@ import mentalHealth from "../../static/home/4.svg"
 import event3 from "../../static/home/3.svg"
 import event2 from "../../static/home/2.svg"
 import event1 from "../../static/home/1.svg"
-
+import team from "../../static/home/5.svg"
 import lionsClub from "../../static/home/深圳狮子会.jpg"
 import iLab from "../../static/home/哈佛创新实验室.png"
 import elaLogo from "../../static/home/睿语国际教育.jpg"
@@ -61,9 +61,9 @@ const Home = ({ data }) => {
 
       {/* <Bio /> */}
 
-      <div className="section bg-purple-100">
+      <div className="section bg-purple-100 pb-64">
         <h2 className="chinese-h2">近期活动</h2>
-        <div className='grid grid-cols-3 gap-4 mb-4'>
+        <div className='gallery'>
           <div className="gallery-card">
           <img src={event1} className="h-64 pb-8"></img>
 
@@ -80,7 +80,7 @@ const Home = ({ data }) => {
           <h3>做最好的自己</h3>
           </div>
         </div>
-        <Link to='/events' itemProp="url" className="absolute right-0 mr-16 2xl:mr-32 text-purple-400">更多活动</Link>
+        <Link to='/events' itemProp="url" className="text-purple-400">更多活动</Link>
       </div>
       <div className="section bg-white">
         <h2 className="chinese-h2">合作项目</h2>
@@ -91,10 +91,10 @@ const Home = ({ data }) => {
 
         </div>
       </div>
-      <div className="section bg-purple-100">
-        <h2 className="chinese-h2">团队</h2>
-
-        <Link to='/about' itemProp="url" className="absolute right-0 mr-16 2xl:mr-32 text-purple-400">关于我们</Link>
+      <div className="section flex bg-purple-100">
+        <div><h2 className="chinese-h2">团队</h2>
+        <p className="leading-relaxed">纸飞机的创始人Yao和Li是在美留学的土生土长的深圳人。2020年的暑假在隔离中的她们决定开始为这个很重要的话题开始做些力所能及的事。纸飞机现在在深圳以及海外有20个左右的年轻人为我们的博客，项目，活动，以及日常工作忙前忙后。想认识他们请看<Link to='/about' className="font-bold text-purple-400">这里</Link>。如果你支持我们的理念可以在<Link to='/join' className="font-bold text-purple-400">这里</Link>联系我们。我们随时都会欢迎有激情和动力的新成员！</p></div>
+        <img src={team} className="w-1/2 px-16 pb-8"></img>
       </div>
     </Layout>
   )

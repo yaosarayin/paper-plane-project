@@ -8,16 +8,16 @@ const About = () => {
   // const authors = data.allWpUser.nodes;
   return (
     <Layout header={<h1 className='chinese-h1'>关于我们</h1>}>
-      <div className="section">
+      <div className="section bg-purple-100">
         <p>
           “纸飞机计划“是一个通过哈佛创新实验室（Harvard Innovation
           Labs）、由青少年发起，并针对青少年和学生心理健康的非盈利组织。纸飞机希望能够打破社会中对许多心理健康问题闭口不谈的现象，广泛普及心理健康知识，为任何年龄段的学生提供免费资源，并提高家属与学校老师对学生、孩子的身心健康的关注度。
         </p>
       </div>
-      <div className='section bg-purple-50'>
+      {/* <div className='section bg-purple-50'>
         <h2 className='chinese-h2'>创始人 Founders</h2>
-      </div>
-      <div className="section">
+      </div> */}
+      <div className="section bg-purple-50">
       <h2 className='chinese-h2'>团队</h2>
         <div className="gallery">
           {authors.map(author => {

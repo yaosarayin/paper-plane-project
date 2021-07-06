@@ -47,11 +47,11 @@ h3 {
 }
 
 .gallery {
-  @apply py-8 grid grid-cols-2 gap-4 xl:grid-cols-3 2xl:grid-cols-5;
+  @apply py-8 grid grid-cols-2 gap-8 xl:grid-cols-3 2xl:grid-cols-4;
 }
 
 .gallery-card {
-  @apply p-8 rounded-lg bg-white shadow;
+  @apply p-8 bg-white rounded-lg
 }
 
 .gallery-item {

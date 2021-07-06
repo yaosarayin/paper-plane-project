@@ -26,7 +26,7 @@ const Blog = ({
   }
 
   return (
-    <Layout header={<h2 className='chinese-h2'>博客</h2>}>
+    <Layout header={<h1 className='chinese-h1'>博客</h1>}>
 
       <SEO title="All posts" />
       <div className="section bg-purple-50">
