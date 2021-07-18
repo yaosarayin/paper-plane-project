@@ -42,7 +42,7 @@ const Blog = ({
                   itemType="http://schema.org/Article"
                 >
                   <header>
-                    <h2 className="font-chinese-display h-20">
+                    <h2 className="font-chinese-display">
                       <Link to={post.uri} itemProp="url">
                         <span itemProp="headline">{parse(title)}</span>
                       </Link>
@@ -84,6 +84,7 @@ export const pageQuery = graphql`
   query WordPressPostArchive {
     allWpPost(
       sort: { fields: [date], order: DESC }
+      filter: {categories: {nodes: {elemMatch: {name: {eq: "Blog"}}}}}
     ) {
       nodes {
         excerpt
