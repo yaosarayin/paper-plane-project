@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
-import data from "../../static/authors.json"
+import Image from "gatsby-image";
 
-const About = () => {
-  const authors = data.data.users.nodes
-  // const authors = data.allWpUser.nodes;
+const About = ({data}) => {
+  const authors = data.allWpUser.nodes
+  console.log('authors',authors)
   return (
     <Layout header={<h1 className='chinese-h1'>关于我们</h1>}>
       <div className="section bg-purple-100">
@@ -27,9 +27,10 @@ const About = () => {
                   <div
                     className="name-avatar"
                   >
+                    
                     <img src={author.avatar.url}
                       className="avatar"
-                    ></img>
+                   />
                       <h2 className="font-bold text-xl">
                         {author.firstName} {author.lastName}
                       </h2>
@@ -54,3 +55,31 @@ const About = () => {
   )
 }
 export default About
+
+export const pageQuery = graphql`
+query authors {  
+allWpUser {
+  nodes {
+    avatar {
+      height
+      size
+      url
+      width
+      foundAvatar
+    }
+    firstName
+    lastName
+    id
+    email
+    description
+    roles {
+      nodes {
+        name
+      }
+    }
+    uri
+    slug
+  }
+}
+}
+`
