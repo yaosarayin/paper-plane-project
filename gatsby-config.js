@@ -31,6 +31,7 @@ module.exports = {
         url: process.env.WPGRAPHQL_URL || `http://54.251.181.102/graphql`,
         schema: {
           perPage: 100,
+          typePrefix: `Wp`,
         },
       },
     },
