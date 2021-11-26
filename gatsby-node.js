@@ -1,6 +1,19 @@
 const path = require(`path`);
 const chunk = require(`lodash/chunk`);
 
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+      stats: {
+    children: true,
+  }})
+}
+
 // This is a simple debugging tool
 // dd() will prettily dump to the terminal and kill the process
 // const { dd } = require(`dumper.js`)
