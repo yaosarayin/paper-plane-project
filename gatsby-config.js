@@ -15,8 +15,7 @@ module.exports = {
    * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
    */
   plugins: [
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
 'gatsby-plugin-postcss',
     {
       /**
@@ -70,7 +69,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/ppp-icon.svg`,
+        icon: `content/assets/icon.svg`,
       },
     },
 

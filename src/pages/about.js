@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
-import Img from "gatsby-image"
+// import Image from "gatsby-image";
 
 const About = ({data}) => {
   const authors = data.allWpUser.nodes
@@ -27,8 +27,8 @@ const About = ({data}) => {
                   <div
                     className="name-avatar"
                   >
-                    
-                    <Img src={author.avatar.url}
+                     
+                    <img src={author.avatar.url}
                       className="avatar"
                    />
                       <h2 className="font-bold text-xl">
