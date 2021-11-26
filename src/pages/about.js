@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
-import { StaticImage } from "gatsby-plugin-image";
+import Img from "gatsby-image"
 
 const About = ({data}) => {
   const authors = data.allWpUser.nodes
@@ -28,7 +28,7 @@ const About = ({data}) => {
                     className="name-avatar"
                   >
                     
-                    <img src={author.avatar.url}
+                    <Img src={author.avatar.url}
                       className="avatar"
                    />
                       <h2 className="font-bold text-xl">
