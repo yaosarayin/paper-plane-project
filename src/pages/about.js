@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Image from "gatsby-image";
 
 const About = ({data}) => {
-  const authors = data.allWpUser.nodes
+  const authors = data.allWpPost.nodes
   console.log('authors',authors)
   return (
     <Layout header={<h1 className='chinese-h1'>关于我们</h1>}>
