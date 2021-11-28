@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "gatsby-image";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
@@ -23,18 +22,16 @@ const About = ({data}) => {
       <h2 className='chinese-h2'>团队</h2>
         <div className="gallery">
           {authors.map(author => {
-            const image = getImage(author.featuredImage?.node?.localFile)
-            console.log(image)
             return (
               <div className="gallery-card">
                    <div
                    className="name-avatar"
                  >
-                      <GatsbyImage image={image} alt={author.title} />
+                      <GatsbyImage image={author.featuredImage?.node?.localFile?.childImageSharp.gatsbyImageData} alt={author.title} />
                       </div>
-                <h2>
+                <h1>
                   {author.title}
-                </h2>
+                </h1>
                 <p>{parse(author.excerpt)}</p>
               </div>
             )
@@ -62,7 +59,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 300)
+                gatsbyImageData(height: 300)
               }
             }
           }
