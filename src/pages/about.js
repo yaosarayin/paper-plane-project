@@ -31,9 +31,9 @@ const About = ({ data }) => {
                     }
                     alt={author.title}
                   />
+                  </div>
                 <h1>{author.title}</h1>
                 <p>{parse(author.excerpt)}</p>
-              </div>
             </div>
           ))}
         </div>
