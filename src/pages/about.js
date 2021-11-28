@@ -2,10 +2,12 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
 
 const About = ({data}) => {
   const authors = data.allWpPost.nodes
-  console.log('authors',authors)
+  console.log('authors',data.allWpPost)
   return (
     <Layout header={<h1 className='chinese-h1'>关于我们</h1>}>
       <div className="section bg-purple-100">
@@ -21,22 +23,19 @@ const About = ({data}) => {
       <h2 className='chinese-h2'>团队</h2>
         <div className="gallery">
           {authors.map(author => {
+            const image = getImage(author.featuredImage?.node?.localFile)
+            console.log(image)
             return (
               <div className="gallery-card">
-                {author.featuredImage && (
                    <div
                    className="name-avatar"
                  >
-                      <Image
-                        fluid={author.featuredImage?.node?.localFile?.childImageSharp?.fluid}
-                        alt={author.featuredImage.node.altText}
-                      />
+                      <GatsbyImage image={image} alt={author.title} />
                       </div>
-                    )}
                 <h2>
                   {author.title}
                 </h2>
-                <p>{author.exerpt}</p>
+                <p>{parse(author.excerpt)}</p>
               </div>
             )
           })}
@@ -63,9 +62,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
+                gatsbyImageData(width: 300)
               }
             }
           }
