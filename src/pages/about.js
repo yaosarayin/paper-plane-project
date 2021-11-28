@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
-// import Image from "gatsby-image";
+import Image from "gatsby-image";
 
 const About = ({data}) => {
   const authors = data.allWpUser.nodes
@@ -21,31 +21,22 @@ const About = ({data}) => {
       <h2 className='chinese-h2'>团队</h2>
         <div className="gallery">
           {authors.map(author => {
-            if (author.avatar.foundAvatar) {
-              return (
-                <div className="gallery-card">
-                  <div
-                    className="name-avatar"
-                  >
-                     
-                    <img src={author.avatar.url}
-                      className="avatar"
-                   />
-                      <h2 className="font-bold text-xl">
-                        {author.firstName} {author.lastName}
-                      </h2>
-                  </div>
-                  {/* <p>{author.email}</p> */}
-                  <p>{author.description}</p>
-                </div>
-              )
-            }
             return (
-              <div>
+              <div className="gallery-card">
+                {author.featuredImage && (
+                   <div
+                   className="name-avatar"
+                 >
+                      <Image
+                        fluid={author.featuredImage?.node?.localFile?.childImageSharp?.fluid}
+                        alt={author.featuredImage.node.altText}
+                      />
+                      </div>
+                    )}
                 <h2>
-                  {author.firstName} {author.lastName}
+                  {author.title}
                 </h2>
-                <p>{author.description}</p>
+                <p>{author.exerpt}</p>
               </div>
             )
           })}
@@ -57,29 +48,29 @@ const About = ({data}) => {
 export default About
 
 export const pageQuery = graphql`
-query authors {  
-allWpUser {
-  nodes {
-    avatar {
-      height
-      size
-      url
-      width
-      foundAvatar
-    }
-    firstName
-    lastName
-    id
-    email
-    description
-    roles {
+  query Users {
+    allWpPost(
+      sort: { fields: [date], order: DESC }
+      filter: {categories: {nodes: {elemMatch: {name: {eq: "Users"}}}}}
+    ) {
       nodes {
-        name
+        excerpt
+        uri
+        date(formatString: "MMMM DD, YYYY")
+        title
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
       }
     }
-    uri
-    slug
   }
-}
-}
 `
