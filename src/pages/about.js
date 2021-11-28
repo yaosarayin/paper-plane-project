@@ -4,11 +4,11 @@ import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
-const About = ({data}) => {
+const About = ({ data }) => {
   const authors = data.allWpPost.nodes
-  console.log('authors',data.allWpPost)
+  console.log("authors", data.allWpPost)
   return (
-    <Layout header={<h1 className='chinese-h1'>关于我们</h1>}>
+    <Layout header={<h1 className="chinese-h1">关于我们</h1>}>
       <div className="section bg-purple-100">
         <p>
           “纸飞机计划“是一个通过哈佛创新实验室（Harvard Innovation
@@ -19,23 +19,25 @@ const About = ({data}) => {
         <h2 className='chinese-h2'>创始人 Founders</h2>
       </div> */}
       <div className="section bg-purple-50">
-      <h2 className='chinese-h2'>团队</h2>
+        <h2 className="chinese-h2">团队</h2>
         <div className="gallery">
-          {authors.map(author => {
-            return (
-              <div className="gallery-card">
-                   <div
-                   className="name-avatar"
-                 >
-                      <GatsbyImage image={author.featuredImage?.node?.localFile?.childImageSharp.gatsbyImageData} alt={author.title} />
-                      </div>
-                <h1>
-                  {author.title}
-                </h1>
+          {authors.map(author => (
+            <div className="gallery-card">
+              <div className="name-avatar">
+                <div style={{ maxHeight: "300px" }}>
+                  <GatsbyImage
+                    image={
+                      author.featuredImage?.node?.localFile?.childImageSharp
+                        .gatsbyImageData
+                    }
+                    alt={author.title}
+                  />
+                </div>
+                <h1>{author.title}</h1>
                 <p>{parse(author.excerpt)}</p>
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </Layout>
@@ -47,7 +49,9 @@ export const pageQuery = graphql`
   query Users {
     allWpPost(
       sort: { fields: [date], order: DESC }
-      filter: {categories: {nodes: {elemMatch: {name: {eq: "Users"}}}}}
+      filter: {
+        categories: { nodes: { elemMatch: { name: { eq: "Users" } } } }
+      }
     ) {
       nodes {
         excerpt
@@ -59,7 +63,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(height: 300)
+                gatsbyImageData(width: 300)
               }
             }
           }
