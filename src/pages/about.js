@@ -23,17 +23,18 @@ const About = ({ data }) => {
         <div className="gallery">
           {authors.map(author => (
             <div className="gallery-card">
-                <div style={{ height: "300px" }}>
-                  <GatsbyImage
-                    image={
-                      author.featuredImage?.node?.localFile?.childImageSharp
-                        .gatsbyImageData
-                    }
-                    alt={author.title}
-                  />
-                  </div>
-                <h1>{author.title}</h1>
-                <p>{parse(author.excerpt)}</p>
+              <div style={{ height: "300px", width: "300px" }}>
+                <GatsbyImage
+                  style={{ height: "300px", width: "300px" }}
+                  image={
+                    author.featuredImage?.node?.localFile?.childImageSharp
+                      .gatsbyImageData
+                  }
+                  alt={author.title}
+                />
+              </div>
+              <h1>{author.title}</h1>
+              <p>{parse(author.excerpt)}</p>
             </div>
           ))}
         </div>
@@ -61,7 +62,7 @@ export const pageQuery = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 300)
+                gatsbyImageData(height: 300)
               }
             }
           }
