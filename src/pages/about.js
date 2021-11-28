@@ -23,8 +23,7 @@ const About = ({ data }) => {
         <div className="gallery">
           {authors.map(author => (
             <div className="gallery-card">
-              <div className="name-avatar">
-                <div style={{ maxHeight: "300px" }}>
+                <div style={{ height: "300px" }}>
                   <GatsbyImage
                     image={
                       author.featuredImage?.node?.localFile?.childImageSharp
@@ -32,7 +31,6 @@ const About = ({ data }) => {
                     }
                     alt={author.title}
                   />
-                </div>
                 <h1>{author.title}</h1>
                 <p>{parse(author.excerpt)}</p>
               </div>
